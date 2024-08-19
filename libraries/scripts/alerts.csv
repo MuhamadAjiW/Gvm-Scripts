@@ -1,0 +1,22 @@
+Alert_EMAIL_Done,EMAIL,"sender@example.com","recipient@example.com","[Greenbone] $n: $e","Task '$n': $e.
+
+This email is configured to attach report format '$r'.
+
+Note:
+This email was sent to you as a configured security scan information.
+Please contact your Vulnerability Management team if you think you
+should not have received it.",2,"CSV Results","Done"
+Alert_EMAIL_Requested,EMAIL,"sender@example.com","recipient@example.com","[Greenbone] $n: $e","Task '$n': $e.
+
+Note:
+This email was sent to you as a configured security scan information.
+Please contact your Vulnerability Management team if you think you
+should not have received it.",1,"CSV Results","Requested"
+Alert_EMAIL_Stop,EMAIL,"sender@example.com","recipient@example.com","[Greenbone] $n: $e","Task '$n': $e.
+
+Note:
+This email was sent to you as a configured security scan information.
+Please contact your Vulnerability Management team if you think you
+should not have received it.",1,"CSV Results","Stopped"
+Alert_SMB_Done_CSV,SMB,"Cred_Storage_SMB","\\smbserver\data","%N_%CT%cZ","Reports",,"CSV Results","Done"
+Alert_SMB_Done_PDF,SMB,"Cred_Storage_SMB","\\smbserver\data","%N_%CT%cZ","Reports",,"PDF Results","Done"

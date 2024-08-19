@@ -1,0 +1,23 @@
+import pathlib
+
+
+class Config:
+    CWD = pathlib.Path(__file__).parent.resolve()
+
+    SCRIPTS_PATH = f"{CWD}/libraries/scripts"
+    CLASSES_PATH = f"{CWD}/classes"
+    CACHE_PATH = f"{CWD}/run/cache"
+    LOG_PATH = f"{CWD}/logs"
+
+    PID_FILE = f"{CWD}/run/gvm_hooks.pid"
+    LOG_FILE = f"{CWD}/logs/gvm_hooks.log"
+    ALLOWED_IP_FILE = f"{CWD}/etc/allowed_ips"
+
+    HOST = "127.0.0.1"
+    PORT = "5000"
+
+    USERNAME = ""
+    PASSWORD = ""
+    ALT_USER = ""
+
+    OUTPUT_PATH = "/var/log/openvas/scans"

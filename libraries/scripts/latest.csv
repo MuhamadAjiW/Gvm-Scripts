@@ -1,0 +1,505 @@
+IP,Hostname,Port,Port Protocol,CVSS,Severity,QoD,Solution Type,NVT Name,Summary,Specific Result,NVT OID,CVEs,Task ID,Task Name,Timestamp,Result ID,Impact,Solution,Affected Software/OS,Vulnerability Insight,Vulnerability Detection Method,Product Detection Result,BIDs,CERTs,Other References
+      127.0.0.1,localhost,,,0.0,Log,80,"","Hostname Determination Reporting","The script reports information on how the hostname of the target
+  was determined.","Hostname determination for IP 127.0.0.1:
+
+Hostname|Source
+localhost|Reverse-DNS
+",1.3.6.1.4.1.25623.1.0.108449,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,aeb8c1cc-6510-4e7a-959d-1696804eadeb,"","","","","
+Details:
+Hostname Determination Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.108449)
+Version used: 2022-07-27T10:11:28Z
+","","","",""
+127.0.0.1,localhost,,,0.0,Log,80,"","PostgreSQL Detection Consolidation","Consolidation of PostgreSQL detections.","Detected PostgreSQL
+
+Version:       unknown
+Location:      5432/tcp
+CPE:           cpe:/a:postgresql:postgresql
+
+Concluded from version/product identification result:
+0x00:  52 00 00 00 17 00 00 00 0A 53 43 52 41 4D 2D 53    R........SCRAM-S
+0x10:  48 41 2D 32 35 36 00 00                            HA-256..
+",1.3.6.1.4.1.25623.1.0.128025,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,3acefc1a-2f8e-441a-b0d9-3fd01996e7f8,"","","","","
+Details:
+PostgreSQL Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.128025)
+Version used: 2024-07-19T05:05:32Z
+","","","",""
+127.0.0.1,localhost,5432,tcp,0.0,Log,80,"","PostgreSQL Detection (TCP)","TCP based detection of PostgreSQL.","A PostgreSQL service has been identified on this port.
+",1.3.6.1.4.1.25623.1.0.100151,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,46006861-3f3d-4ab1-aaf3-a2b5fb410fe1,"","","","","The script sends a connection request to the server
+  (user:postgres, DB:postgres) and attempts to extract the version number from the reply.
+Details:
+PostgreSQL Detection (TCP)
+(OID: 1.3.6.1.4.1.25623.1.0.100151)
+Version used: 2024-07-22T05:05:40Z
+","","","",""
+127.0.0.1,localhost,6379,tcp,0.0,Log,80,"","Service Detection with GET Request","This plugin performs service detection.","A Redis server seems to be running on this port.
+",1.3.6.1.4.1.25623.1.0.17975,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,f5cfa705-23b3-4556-9540-9362ce881eaf,"","","","This plugin is a complement of the plugin 'Services' (OID:
+  1.3.6.1.4.1.25623.1.0.10330). It sends a HTTP 'GET' request to the remaining unknown services and
+  tries to identify them.","
+Details:
+Service Detection with 'GET' Request
+(OID: 1.3.6.1.4.1.25623.1.0.17975)
+Version used: 2024-06-26T05:05:39Z
+","","","",""
+127.0.0.1,localhost,22,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","An ssh server is running on this port
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,63b28f66-a7f0-4ac3-a469-377705cd6cb2,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,55000,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A TLScustom server answered on this port
+
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,d2cfaba0-48fb-4290-843b-12b3dcafb057,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,9392,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port through SSL
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,0a718cc3-c1e6-486b-bf59-7a4fcf9e8813,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,9300,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A TLScustom server answered on this port
+
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,838b8808-7e8d-4ac5-ab4a-efe46b295bb2,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,55000,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port through SSL
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,57c8032e-a9c5-47bb-9218-06c794c36f11,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,3000,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,efebf61c-245b-4422-99a8-37dcf0c58d11,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,1515,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A TLScustom server answered on this port
+
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,6a2cd42c-56bd-4c5b-9953-8a2a309fb8db,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,443,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A TLScustom server answered on this port
+
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,270e5c9f-0142-4c31-a0fa-94e91ddcefa9,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,443,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port through SSL
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,3c330fef-99f3-44e7-8840-41f98a1a66b4,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,5000,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,ab98c506-f402-414b-8f5c-f879742a799f,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,5432,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","An unknown service is running on this port.
+It is usually reserved for Postgres
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,57651cb6-2a12-473b-8404-a3db817b65f9,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,9200,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A TLScustom server answered on this port
+
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,2d806d47-cd51-4b2d-87b4-5809a5d6994a,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,9200,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port through SSL
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,5aad42a7-fd53-4312-812a-8613908ed745,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,10050,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","The service closed the connection after 0 seconds without sending any data
+It might be protected by some TCP wrapper
+
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,12de9d6d-e089-465a-8f21-ca09ebda104e,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,9392,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A TLScustom server answered on this port
+
+",1.3.6.1.4.1.25623.1.0.10330,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,26eb825d-c94e-4935-9aa5-d0add74593ba,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+127.0.0.1,localhost,22,tcp,0.0,Log,80,"","SSH Server type and version","This detects the SSH Server's type and version by connecting to
+  the server and processing the buffer received.","Remote SSH server banner: SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+Remote SSH supported authentication: none,password,publickey,hostbased,keyboard-interactive
+Remote SSH text/login banner: (not available)
+
+This is probably:
+
+- OpenSSH
+
+Concluded from remote connection attempt with credentials:
+
+Login:    OpenVASVT
+Password: OpenVASVT
+",1.3.6.1.4.1.25623.1.0.10267,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,eb6d902a-1282-4ca4-bab1-5318768f9b76,"","","","This information gives potential attackers additional
+  information about the system they are attacking. Versions and Types should be omitted where
+  possible.","
+Details:
+SSH Server type and version
+(OID: 1.3.6.1.4.1.25623.1.0.10267)
+Version used: 2024-08-02T05:05:39Z
+","","","",""
+127.0.0.1,localhost,5432,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 01EA584CAEF67324AA7E7520749C03A4EDBAF6DB
+fingerprint (SHA-256)           | B3AA2433909333F8428A2DB7CB5EADD3B789877E183E8D1550F32BE22848CE54
+issued by                       | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 6FD4CF8BD8AFD312F9BCEC7C9B23FC93B2139243
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+subject alternative names (SAN) | localhost
+valid from                      | 2024-07-13 18:56:42 UTC
+valid until                     | 2025-07-13 18:56:42 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,ed9c6d20-5b52-4fc9-bd5c-2f1f5793b0ea,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-06-14T05:05:48Z
+","","","",""
+127.0.0.1,localhost,1515,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 01EA584CAEF67324AA7E7520749C03A4EDBAF6DB
+fingerprint (SHA-256)           | B3AA2433909333F8428A2DB7CB5EADD3B789877E183E8D1550F32BE22848CE54
+issued by                       | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 6FD4CF8BD8AFD312F9BCEC7C9B23FC93B2139243
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+subject alternative names (SAN) | localhost
+valid from                      | 2024-07-13 18:56:42 UTC
+valid until                     | 2025-07-13 18:56:42 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,c3da7241-86de-442a-b4f7-db9c2c806381,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-06-14T05:05:48Z
+","","","",""
+127.0.0.1,localhost,9392,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 01EA584CAEF67324AA7E7520749C03A4EDBAF6DB
+fingerprint (SHA-256)           | B3AA2433909333F8428A2DB7CB5EADD3B789877E183E8D1550F32BE22848CE54
+issued by                       | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 6FD4CF8BD8AFD312F9BCEC7C9B23FC93B2139243
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+subject alternative names (SAN) | localhost
+valid from                      | 2024-07-13 18:56:42 UTC
+valid until                     | 2025-07-13 18:56:42 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,319dae29-b31b-4705-9af5-746e6ee74cb0,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-06-14T05:05:48Z
+","","","",""
+127.0.0.1,localhost,9200,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 01EA584CAEF67324AA7E7520749C03A4EDBAF6DB
+fingerprint (SHA-256)           | B3AA2433909333F8428A2DB7CB5EADD3B789877E183E8D1550F32BE22848CE54
+issued by                       | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 6FD4CF8BD8AFD312F9BCEC7C9B23FC93B2139243
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+subject alternative names (SAN) | localhost
+valid from                      | 2024-07-13 18:56:42 UTC
+valid until                     | 2025-07-13 18:56:42 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,ac440fb1-eb3c-4d15-b132-adc9da8df4fc,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-06-14T05:05:48Z
+","","","",""
+127.0.0.1,localhost,55000,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 01EA584CAEF67324AA7E7520749C03A4EDBAF6DB
+fingerprint (SHA-256)           | B3AA2433909333F8428A2DB7CB5EADD3B789877E183E8D1550F32BE22848CE54
+issued by                       | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 6FD4CF8BD8AFD312F9BCEC7C9B23FC93B2139243
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+subject alternative names (SAN) | localhost
+valid from                      | 2024-07-13 18:56:42 UTC
+valid until                     | 2025-07-13 18:56:42 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,82230d0e-bc96-4d75-b2b9-51a15ca71f82,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-06-14T05:05:48Z
+","","","",""
+127.0.0.1,localhost,443,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 01EA584CAEF67324AA7E7520749C03A4EDBAF6DB
+fingerprint (SHA-256)           | B3AA2433909333F8428A2DB7CB5EADD3B789877E183E8D1550F32BE22848CE54
+issued by                       | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 6FD4CF8BD8AFD312F9BCEC7C9B23FC93B2139243
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+subject alternative names (SAN) | localhost
+valid from                      | 2024-07-13 18:56:42 UTC
+valid until                     | 2025-07-13 18:56:42 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,3d9eeb64-f3aa-4558-af62-0bee10447a69,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-06-14T05:05:48Z
+","","","",""
+127.0.0.1,localhost,9300,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 01EA584CAEF67324AA7E7520749C03A4EDBAF6DB
+fingerprint (SHA-256)           | B3AA2433909333F8428A2DB7CB5EADD3B789877E183E8D1550F32BE22848CE54
+issued by                       | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 6FD4CF8BD8AFD312F9BCEC7C9B23FC93B2139243
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=wazuh.com,O=Wazuh,L=San Francisco,ST=California,C=US
+subject alternative names (SAN) | localhost
+valid from                      | 2024-07-13 18:56:42 UTC
+valid until                     | 2025-07-13 18:56:42 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,764a755e-f945-4fce-b221-d0751437367b,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-06-14T05:05:48Z
+","","","",""
+127.0.0.1,localhost,,,0.0,Log,98,"","SSL/TLS: Hostname discovery from server certificate","It was possible to discover an additional hostname
+  of this server from its certificate Common or Subject Alt Name.","The following additional and resolvable hostnames pointing to a different host ip were detected:
+
+com
+wazuh.com
+
+The following additional but not resolvable hostnames were detected:
+
+Wazuh
+wazuh-dashboard
+wazuh-indexer
+
+
+",1.3.6.1.4.1.25623.1.0.111010,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,b87ce27b-be64-4b50-afee-d707cd29bba5,"","","","","
+Details:
+SSL/TLS: Hostname discovery from server certificate
+(OID: 1.3.6.1.4.1.25623.1.0.111010)
+Version used: 2021-11-22T15:32:39Z
+","","","",""
+127.0.0.1,localhost,5432,tcp,0.0,Log,80,"","SSL/TLS: PostgreSQL SSL/TLS Support Detection (PostgreSQL Protocol)","Checks if the remote PostgreSQL server supports SSL/TLS.","The remote PostgreSQL server supports SSL/TLS.
+",1.3.6.1.4.1.25623.1.0.105013,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,b5ab6bf3-4c21-4d67-ac36-d3b2c233af72,"","","","","
+Details:
+SSL/TLS: PostgreSQL SSL/TLS Support Detection (PostgreSQL Protocol)
+(OID: 1.3.6.1.4.1.25623.1.0.105013)
+Version used: 2024-07-24T05:06:37Z
+","Product: cpe:/a:postgresql:postgresql
+Method: PostgreSQL Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.128025)
+","","",""
+127.0.0.1,localhost,1515,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.2
+TLSv1.3
+",1.3.6.1.4.1.25623.1.0.105782,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,14ca1876-a985-4373-bae8-0829611ebad7,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-07-24T05:06:37Z
+","","","",""
+127.0.0.1,localhost,443,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.2
+TLSv1.3
+",1.3.6.1.4.1.25623.1.0.105782,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,767f887d-5b92-4e60-89fa-bbf37ed90149,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-07-24T05:06:37Z
+","","","",""
+127.0.0.1,localhost,5432,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.2
+TLSv1.3
+",1.3.6.1.4.1.25623.1.0.105782,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,84758dbb-9bf9-4f10-a868-90df9508e2e6,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-07-24T05:06:37Z
+","","","",""
+127.0.0.1,localhost,55000,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.2
+TLSv1.3
+",1.3.6.1.4.1.25623.1.0.105782,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,371d9077-4054-4d51-828d-547e6bdf3943,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-07-24T05:06:37Z
+","","","",""
+127.0.0.1,localhost,9200,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.2
+",1.3.6.1.4.1.25623.1.0.105782,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,3ed34fa3-c7e6-47cb-a511-9c615174fba7,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-07-24T05:06:37Z
+","","","",""
+127.0.0.1,localhost,9300,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.2
+TLSv1.3
+",1.3.6.1.4.1.25623.1.0.105782,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,82c27796-33e7-4190-bf6a-e99d88a66137,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-07-24T05:06:37Z
+","","","",""
+127.0.0.1,localhost,9392,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.0
+TLSv1.1
+TLSv1.2
+TLSv1.3
+",1.3.6.1.4.1.25623.1.0.105782,"",0e1c0706-f3ab-4378-a68b-9c1131e1b1ad,"Self-base-scan",2024-08-13T06:55:09Z,efb18181-58c1-4aa1-8d24-2a62bfaf9dc6,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-07-24T05:06:37Z
+","","","",""
