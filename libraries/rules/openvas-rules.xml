@@ -1,0 +1,25 @@
+<group name="openvas,">
+  <rule id="100010" level="12">
+    <program_name>openvas</program_name>
+        <field name="openvas.severity">Low</field>
+    <description>Low vulnerability detected by OpenVAS</description>
+  </rule>
+
+  <rule id="100011" level="13">
+    <program_name>openvas</program_name>
+        <field name="openvas.severity">Medium</field>
+    <description>Medium vulnerability detected by OpenVAS</description>
+  </rule>
+
+  <rule id="100012" level="14">
+    <program_name>openvas</program_name>
+        <field name="openvas.severity">High</field>
+    <description>High vulnerability detected by OpenVAS</description>
+  </rule>
+
+  <rule id="100013" level="15">
+    <program_name>openvas</program_name>
+        <field name="openvas.severity">Critical</field>
+    <description>Critical vulnerability detected by OpenVAS</description>
+  </rule>
+</group>

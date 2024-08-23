@@ -1,0 +1,10 @@
+<decoder name="openvas-scan">
+  <program_name>^openvas$</program_name>
+  <prematch>^{"IP":</prematch>
+</decoder>
+
+<decoder name="openvas-scan-fields">
+  <parent>openvas-scan</parent>
+  <regex>^{"IP": "(\S+)", "Hostname": "(\S*)", "Port": (\S*), "Port Protocol": "(\S*)", "CVSS": (\S*), "Severity": "(\S*)", "QoD": (\S*), "Solution Type": "(\S*)", "NVT Name": "(\.*)", "Summary": "(\.*)", "Specific Result": "(\.*)", "NVT OID": "(\.*)", "CVEs": "(\.*)", "Task ID": "(\S*)", "Task Name": "(\.*)", "Timestamp": "(\S*)", "Result ID": "(\S*)", "Impact": "(\.*)", "Solution": "(\.*)", "Affected Software/OS": "(\.*)", "Vulnerability Insight": "(\.*)", "Vulnerability Detection Method": "(\.*)", "Product Detection Result": "(\.*)", "BIDs": "(\.*)", "CERTs": "(\.*)", "Other References": [(\.*)]</regex>
+  <order>openvas.ip,openvas.hostname,openvas.port,openvas.protocol,openvas.cvss,openvas.severity,openvas.qod,openvas.solution_type,openvas.nvt_name,openvas.summary,openvas.specific_result,openvas.nvt_oid,openvas.cves,openvas.task_id,openvas.task_name,openvas.timestamp,openvas.result_id,openvas.impact,openvas.solution,openvas.affected_software,openvas.vulnerability_insight,openvas.detection_method,openvas.product_detection,openvas.bids,openvas.certs,openvas.other_references</order>
+</decoder>
