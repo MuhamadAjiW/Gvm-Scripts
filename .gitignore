@@ -1,8 +1,10 @@
 *__pycache__
 config.py
+startscan.csv
 *.ignore
 
 /logs/*
 /run/*
+/deprecated
 
 !*.gitkeep

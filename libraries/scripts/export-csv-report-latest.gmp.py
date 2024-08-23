@@ -40,7 +40,7 @@ def get_latest_report_id(gmp: Gmp):
     response_xml = gmp.get_reports(
         ignore_pagination=True,
         details=True,
-        filter_string="status=Done  and sort-reverse=created  and rows=-1",
+        filter_string="status=Done  and sort-reverse=modified  and rows=-1",
     )
 
     reports_xml = response_xml.xpath("report")

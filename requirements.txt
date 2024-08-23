@@ -1,0 +1,4 @@
+Flask==3.0.3
+gvm-tools==24.7.0
+python-gvm==24.7.0
+lxml==4.8.0
