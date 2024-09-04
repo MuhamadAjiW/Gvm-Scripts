@@ -9,16 +9,13 @@ from config import Config
 from libraries import GVMLogger
 from classes.gvm_hooks import GVMHooks
 from libraries.common import load_allowed_ips, is_root
-from archive_scans import GVMArchiveManager
+from classes.gvm_archive import GVMArchive
 
 
 global app
 gvm_hooks_instance = GVMHooks(allowed_ips=load_allowed_ips(Config.ALLOWED_IP_FILE))
 app = gvm_hooks_instance.app
-
-write_log = GVMLogger(
-    __name__, f"{Config.LOG_PATH}/gvm_hooks.log"
-).write_log
+write_log = GVMLogger(__name__, Config.HOOKS_LOG_FILE).write_log
 
 if not is_root():
     gvm_hooks_instance.__write_log("Script must be run as root")
@@ -32,7 +29,7 @@ def start_server():
         )
         sys.exit(1)
 
-    with open(Config.LOG_FILE, "a") as log_file:
+    with open(Config.HOOKS_LOG_FILE, "a") as log_file:
         process = subprocess.Popen(
             [
                 "nohup",
@@ -48,7 +45,9 @@ def start_server():
     with open(Config.PID_FILE, "w") as pid_file:
         pid_file.write(str(process.pid))
 
-    write_log(f"Server started with PID {process.pid}, check logs at {Config.LOG_FILE}")
+    write_log(
+        f"Server started with PID {process.pid}, check logs at {Config.HOOKS_LOG_FILE}"
+    )
 
 
 def stop_server():
@@ -68,10 +67,14 @@ def stop_server():
     finally:
         os.remove(Config.PID_FILE)
 
+
 def archive_data():
-    logger = GVMLogger(f"{Path(__file__).stem}.{GVMArchiveManager.__qualname__}", Config.ARCHIVE_LOG_FILE)
-    file_manager = GVMArchiveManager(Config.ARCHIVE_PATH, Config.OUTPUT_PATH, logger)
+    logger = GVMLogger(
+        f"{Path(__file__).stem}.{GVMArchive.__qualname__}", Config.ARCHIVE_LOG_FILE
+    )
+    file_manager = GVMArchive(Config.ARCHIVE_PATH, Config.OUTPUT_PATH, logger)
     file_manager.archive_output()
+
 
 def main():
     parser = argparse.ArgumentParser(description="Controller for gvm")

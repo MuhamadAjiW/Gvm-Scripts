@@ -18,9 +18,7 @@ class GVMReport:
         self.host_name = host_name
         self.program_name = program_name
 
-        self.__write_log = GVMLogger(
-            __name__, f"{Config.LOG_PATH}/gvm_report.log"
-        ).write_log
+        self.__write_log = GVMLogger(__name__, Config.REPORT_LOG_FILE).write_log
 
     def process_data(self, input_file: str) -> list:
         self.__write_log("Processing data", GVMLogger.INFO)

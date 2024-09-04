@@ -1,6 +1,8 @@
 import logging
 from pathlib import Path
 from datetime import datetime
+from config import Config
+
 
 class GVMLoggingFormatter(logging.Formatter):
     def formatTime(self, record, datefmt=None):
@@ -8,6 +10,7 @@ class GVMLoggingFormatter(logging.Formatter):
             return super().formatTime(record, datefmt=datefmt)
 
         return datetime.fromtimestamp(record.created).astimezone().strftime(datefmt)
+
 
 class GVMLogger(logging.Logger):
     NOTSET = logging.NOTSET
@@ -41,28 +44,30 @@ class GVMLogger(logging.Logger):
         "CRITICAL": CRITICAL,
         "FATAL": FATAL,
     }
-    
+
     def __init__(
-            self, 
-            name: str, 
-            file_path: Path | str,
-            level: int | str = DEBUG,
-            formatter: GVMLoggingFormatter = GVMLoggingFormatter("[%(asctime)s] [%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S.%f %z"),
-            ) -> None:
+        self,
+        name: str,
+        file_path: Path | str,
+        level: int | str = DEBUG,
+        formatter: GVMLoggingFormatter = GVMLoggingFormatter(
+            "[%(asctime)s] [%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S.%f %z"
+        ),
+    ) -> None:
         super().__init__(name, level)
         self.file_path: Path = Path(file_path)
         self.formatter = formatter
         self.__setup_logger()
-        
+
     def __setup_logger(self):
         log_path = self.file_path.parent
         log_path.mkdir(parents=True, exist_ok=True)
-        
+
         handler = logging.FileHandler(self.file_path)
         handler.setFormatter(self.formatter)
         self.addHandler(handler)
         self.propagate = False
-        
+
     def write_log(self, msg: str, level: int = DEBUG):
         if level == self.NOTSET:
             self.debug(f"[NOTSET] {msg}")
@@ -80,16 +85,19 @@ class GVMLogger(logging.Logger):
             # UNKNOWN
             self.warning(f"[UNKNOWN LEVEL {level}] {msg}")
 
+
 # Cara penggunaan:
 if __name__ == "__main__":
-    logger = GVMLogger("gvm_script", Path("/home/com/openvas/gvm-script/logs/gvm_script.log"))
-    
+    logger = GVMLogger("gvm_script", Config.SCRIPT_LOG_FILE)
+
     logger.write_log("This is a notset level message", GVMLogger.NOTSET)
     logger.write_log("This is a debug level message", GVMLogger.DEBUG)
     logger.write_log("This is an info level message", GVMLogger.INFO)
     logger.write_log("This is a warning level message", GVMLogger.WARN)
     logger.write_log("This is an error level message", GVMLogger.ERROR)
     logger.write_log("This is a fatal level message", GVMLogger.FATAL)
-    logger.write_log("This is an unknown level message", 999)  # Level yang tidak dikenal
-    
+    logger.write_log(
+        "This is an unknown level message", 999
+    )  # Level yang tidak dikenal
+
     print("Logging complete")

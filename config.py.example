@@ -5,12 +5,15 @@ class Config:
     CWD = pathlib.Path(__file__).parent.resolve()
 
     SCRIPTS_PATH = f"{CWD}/libraries/scripts"
-    CLASSES_PATH = f"{CWD}/classes"
     CACHE_PATH = f"{CWD}/run/cache"
     LOG_PATH = f"{CWD}/logs"
+    HOOKS_LOG_FILE = f"{LOG_PATH}/gvm_hooks.log"
+    ARCHIVE_LOG_FILE = f"{LOG_PATH}/gvm_archive.log"
+    REPORT_LOG_FILE = f"{LOG_PATH}/gvm_report.log"
+    SCRIPT_LOG_FILE = f"{LOG_PATH}/gvm_script.log"
 
     PID_FILE = f"{CWD}/run/gvm_hooks.pid"
-    LOG_FILE = f"{CWD}/logs/gvm_hooks.log"
+
     ALLOWED_IP_FILE = f"{CWD}/etc/allowed_ips"
 
     HOST = "127.0.0.1"

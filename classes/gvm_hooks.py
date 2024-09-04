@@ -21,9 +21,7 @@ class GVMHooks:
         self.setup_routes()
         self.whitelist = whitelist
 
-        self.__write_log = GVMLogger(
-            __name__, f"{Config.LOG_PATH}/gvm_hooks.log"
-        ).write_log
+        self.__write_log = GVMLogger(__name__, Config.HOOKS_LOG_FILE).write_log
 
     def set_whitelist(self, status: bool):
         self.whitelist = status
