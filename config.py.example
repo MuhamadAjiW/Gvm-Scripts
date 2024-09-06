@@ -24,3 +24,4 @@ class Config:
     ALT_USER = ""
 
     OUTPUT_PATH = "/var/log/openvas/scans"
+    ARCHIVE_PATH = "/var/log/openvas/archive"
